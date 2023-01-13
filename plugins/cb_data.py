@@ -316,8 +316,3 @@ async def aud(bot, update):
             neg_used = used - int(file.file_size)
             used_limit(update.from_user.id, neg_used)
             os.remove(file_path)
-
-
-# 
-#  LazyDeveloperr
-# 
