@@ -23,7 +23,7 @@ log_channel = int(os.environ.get("LOG_CHANNEL", ""))
 token = os.environ.get('TOKEN', '')
 botid = token.split(':')[0]
 FLOOD = 500
-LAZY_PIC = os.environ.get("LAZY_PIC", "")
+PICS = os.environ.get("PICS", "")
 
 
 # Part of Day --------------------
@@ -47,7 +47,7 @@ async def start(client, message):
     except:
         txt=f"""Hello {wish} {message.from_user.first_name } \n\n
 	I am file renamer bot, Please sent any telegram**Document Or Video** and enter new filename to rename it"""
-        await message.reply_photo(photo=LAZY_PIC,
+        await message.reply_photo(photo=PICS,
                                 caption=txt,
                                 reply_markup=InlineKeyboardMarkup(
                                       [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/LazyDeveloper")],
@@ -61,7 +61,7 @@ async def start(client, message):
         if old == True:
             try:
                 await client.send_message(id, "Your Friend is Already Using Our Bot")
-                await message.reply_photo(photo=LAZY_PIC,
+                await message.reply_photo(photo=PICS,
                                          caption=txt,
                                          reply_markup=InlineKeyboardMarkup(
                                              [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/LazyDeveloper")],
@@ -107,7 +107,7 @@ async def send_doc(client, message):
                                      reply_to_message_id=message.id,
                                      reply_markup=InlineKeyboardMarkup(
                                          [[InlineKeyboardButton("🔺 Update Channel 🔺", url=f"https://t.me/{update_channel}")]]))
-            await client.send_message(log_channel,f"🦋 #GangsterBaby_LOGS 🦋,\n\n**ID** : `{user_id}`\n**Name**: {message.from_user.first_name} {message.from_user.last_name}\n**User-Plan** : {user}\n\n ",
+            await client.send_message(log_channel,f"🦋 #LOGS 🦋,\n\n**ID** : `{user_id}`\n**Name**: {message.from_user.first_name} {message.from_user.last_name}\n**User-Plan** : {user}\n\n ",
                                                                                                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Restrict User ( **pm** ) 🔺", callback_data="ceasepower")]]))
             return
 
