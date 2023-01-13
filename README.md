@@ -86,7 +86,7 @@
 
 ### Admin Commands
 
-`/lazyusers` - To view list of users, using BOT [FOR ADMINS USE ONLY]
+`/users` - To view list of users, using BOT [FOR ADMINS USE ONLY]
  
 `/broadcast` - Message Broadcast command [FOR ADMINS USE ONLY].
  
